@@ -31,6 +31,8 @@ pipeline {
           
           env.ENV_VAR1 = "${data.attachments[0].color}"
           env.ENV_VAR2 = "${data.attachments[0].fields[0].value}"
+          
+          echo "Customers.lifecycle.appserver: ${custdata.Customers.lifecycle[0].app_servers[0].hostname.value}"
                   
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
