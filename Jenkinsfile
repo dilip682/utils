@@ -45,10 +45,10 @@ pipeline {
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].app_servers[1].ip_address}"
           
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].hostname}"
-          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[1].ip_address}"
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].ip_address}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].db_name}"
-          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[1].port}"
-          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[1].username}"
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].port}"
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].username}"
                 
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
