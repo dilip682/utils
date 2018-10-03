@@ -32,6 +32,8 @@ pipeline {
           env.ENV_VAR1 = "${data.attachments[0].color}"
           env.ENV_VAR2 = "${data.attachments[0].fields[0].value}"
           
+          echo "dev-hostname: ${custdata.customers[0].name}"
+          echo "dev-hostname: ${custdata.customers[0].description}"
                 
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
