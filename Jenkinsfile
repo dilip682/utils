@@ -1,7 +1,5 @@
 import groovy.json.JsonSlurperClassic
 import groovy.json.*
-import hudson.EnvVars
-import hudson.model.Environment
 pipeline {
   agent any
   stages {
@@ -22,13 +20,12 @@ pipeline {
         script {
           def json = readFile(file:'message.json')
           def data = new JsonSlurperClassic().parseText(json)
-          def build = Thread.currentThread().executable
-          def vars = [ENV_VAR1: 'value1', ENV_VAR2: 'value2']
-          
+
           echo "color: ${data.attachments[0].color}"
           echo "fields.title: ${data.attachments[0].fields[0].title}"
-          echo "color: ${data.attachments[0].fields[0].title}"
-          build.environments.add(0, Environment.create(new EnvVars(vars)))
+          env.ENV_VAR1 = ${data.attachments[0].color}
+          env.ENV_VAR2 = ${data.attachments[0].fields[0].title}
+ 
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
         sh 'echo "### ENV_VAR2 $ENV_VAR2"'        
