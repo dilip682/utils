@@ -10,11 +10,11 @@
           "app_servers": [
             {
               "hostname": "app-node1-host",
-              "ip_address": "app-node1-ip"
+              "ip_address": "10.0.3.28"
             },
             {
               "hostname": "app-node2-host",
-              "ip_address": "app-node2-ip"
+              "ip_address": "10.0.3.239"
             }
           ]
         }
