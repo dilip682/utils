@@ -1,3 +1,100 @@
 {
-  "attr1": "One"
+  "Customers": {
+    "cust_name": "dcust",
+    "location": "US",
+    "lifecycle": [
+      {
+        "dev": {
+          "app_servers": [
+            {
+              "hostname": "app-node1-host",
+              "ip_address": "app-node1-ip"
+            },
+            {
+              "hostname": "app-node2-host",
+              "ip_address": "app-node2-ip"
+            }
+          ],
+          "db_servers": [
+            {
+              "hostname": "db-node1-host",
+              "ip_address": "db-node1-ip",
+              "db_name": "orcl",
+              "port": "1521",
+              "user_name": "tssdemo",
+              "passwd": "stone01"
+            },
+            {
+              "hostname": "db-node2-host",
+              "ip_address": "db-node2-ip",
+              "db_name": "orcl",
+              "port": "1521",
+              "user_name": "tssdemo",
+              "passwd": "stone01"
+            }
+          ]
+        },
+        "test": {
+          "app_servers": [
+            {
+              "hostname": "app-node1-host",
+              "ip_address": "app-node1-ip"
+            },
+            {
+              "hostname": "app-node2-host",
+              "ip_address": "app-node2-ip"
+            }
+          ],
+          "db_servers": [
+            {
+              "hostname": "db-node1-host",
+              "ip_address": "db-node1-ip",
+              "db_name": "orcl",
+              "port": "1521",
+              "user_name": "tssdemo",
+              "passwd": "stone01"
+            },
+            {
+              "hostname": "db-node2-host",
+              "ip_address": "db-node2-ip",
+              "db_name": "orcl",
+              "port": "1521",
+              "user_name": "tssdemo",
+              "passwd": "stone01"
+            }
+          ]
+        },
+        "prod": {
+          "app_servers": [
+            {
+              "hostname": "app-node1-host",
+              "ip_address": "app-node1-ip"
+            },
+            {
+              "hostname": "app-node2-host",
+              "ip_address": "app-node2-ip"
+            }
+          ],
+          "db_servers": [
+            {
+              "hostname": "db-node1-host",
+              "ip_address": "db-node1-ip",
+              "db_name": "orcl",
+              "port": "1521",
+              "user_name": "tssdemo",
+              "passwd": "stone01"
+            },
+            {
+              "hostname": "db-node2-host",
+              "ip_address": "db-node2-ip",
+              "db_name": "orcl",
+              "port": "1521",
+              "user_name": "tssdemo",
+              "passwd": "stone01"
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
