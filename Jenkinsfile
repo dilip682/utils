@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurperClassic
+import groovy.json.*
 pipeline {
   agent any
   stages {
