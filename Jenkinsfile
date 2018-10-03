@@ -9,9 +9,10 @@ pipeline {
         sh 'echo "INHERITED_ENV is $INHERITED_ENV"'
       }
     }
-    stage('readJSONFile') {
+    stage('readCustomerFile') {
       steps {
         readFile 'customer.json'
+        echo 'Reading file'
       }
     }
   }
