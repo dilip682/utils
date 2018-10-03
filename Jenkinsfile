@@ -22,7 +22,7 @@ pipeline {
           def data = new JsonSlurperClassic().parseText(json)
 
           echo "color: ${data.attachments[0].color}"
-          env.ENV_VAR1 = ${data.attachments[0].color}
+          env.ENV_VAR1 = "${data.attachments[0].color}"
  
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
