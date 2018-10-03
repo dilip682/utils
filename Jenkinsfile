@@ -31,8 +31,7 @@ pipeline {
  
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
-        sh 'echo "### ENV_VAR2 $ENV_VAR2"' 
-        sh 'echo "### ENV_VAR3_TITLE ${data.attachments[0].fields[0].title}"'    
+        sh 'echo "### ENV_VAR2 $ENV_VAR2"'  
       }
     }
   }
