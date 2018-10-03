@@ -11,8 +11,14 @@ pipeline {
     }
     stage('readCustomerFile') {
       steps {
-        readFile 'customer.json'
         echo 'Reading file'
+        readFile 'customer.json'
+        echo 'Writing file'
+        writeFile file: 'customer-write.json', text: 'Testing'
+        
+        def json = readFile(file:'message.json')
+        def data = new JsonSlurperClassic().parseText(json)
+        echo "color: ${data.attachments[0].color}"
       }
     }
   }
