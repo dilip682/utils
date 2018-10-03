@@ -33,7 +33,16 @@ pipeline {
           env.ENV_VAR2 = "${data.attachments[0].fields[0].value}"
           
           echo "dev-hostname: ${custdata.customers[0].name}"
-          echo "dev-hostname: ${custdata.customers[0].description}"
+          echo "dev-hostname: ${custdata.customers[0].location}"
+          
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].name}"
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].description}"
+          
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].app_servers[0].hostname}"
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].app_servers[0].ip_address}"
+          
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].app_servers[1].hostname}"
+          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].app_servers[1].ip_address}"
                 
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
