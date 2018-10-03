@@ -11,6 +11,7 @@ pipeline {
     }
     stage('readCustomerFile') {
       steps {
+        import groovy.json.JsonSlurperClassic
         echo 'Reading file'
         readFile 'customer.json'
         echo 'Writing file'
