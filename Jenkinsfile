@@ -19,7 +19,10 @@ pipeline {
         writeFile file: 'customer-write.json', text: 'Testing'
         script {
           def json = readFile(file:'message.json')
+          def customer = readFile(file:'customer.json')
+          
           def data = new JsonSlurperClassic().parseText(json)
+          def custdata = new JsonSlurperClassic().parseText(customer)
 
           echo "color: ${data.attachments[0].color}"
           echo "fields.value: ${data.attachments[0].fields[0].value}"
@@ -28,7 +31,7 @@ pipeline {
           
           env.ENV_VAR1 = "${data.attachments[0].color}"
           env.ENV_VAR2 = "${data.attachments[0].fields[0].value}"
- 
+                  
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
         sh 'echo "### ENV_VAR2 $ENV_VAR2"'  
