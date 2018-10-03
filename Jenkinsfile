@@ -21,7 +21,11 @@ pipeline {
           def json = readFile(file:'message.json')
           def data = new JsonSlurperClassic().parseText(json)
           echo "color: ${data.attachments[0].color}"
+          echo "fields.title: ${data.attachments[0].fields[0].title}"
+          echo "color: ${data.attachments[0].fields[0].title}"
+          sh 'COLOR = ${data.attachments[0].fields[0].title}'
         }
+        sh 'echo "### Color-out $COLOR"'
       }
     }
   }
