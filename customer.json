@@ -19,10 +19,6 @@
                     {
                       "hostname": "app-node1-host",
                       "ip_address": "10.0.3.28"
-                    },
-                    {
-                      "hostname": "app-node2-host",
-                      "ip_address": "10.0.3.239"
                     }
                   ]
                 }
@@ -71,10 +67,6 @@
                     {
                       "hostname": "app-node1-host",
                       "ip_address": "10.0.3.28"
-                    },
-                    {
-                      "hostname": "app-node2-host",
-                      "ip_address": "10.0.3.239"
                     }
                   ]
                 }
@@ -123,10 +115,6 @@
                     {
                       "hostname": "app-node1-host",
                       "ip_address": "10.0.3.28"
-                    },
-                    {
-                      "hostname": "app-node2-host",
-                      "ip_address": "10.0.3.239"
                     }
                   ]
                 }
