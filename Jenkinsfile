@@ -39,7 +39,7 @@ pipeline {
   //        def cust_name_path = '${params.CUST_NAME}.name'
    //       echo 'cust_name_path+cust_name_path+'
   //        echo "${cust_name_path}"
-          echo "Customer Name from JSON matching Customer Param: ${custdata.customers.dcust.name}"
+          echo "Customer Name from JSON matching Customer Param: ${custdata.customers.get(${params.CUST_NAME}).name}"
           
   /*        echo "dev-hostname: ${custdata.customers[0].lifecycle[0].name}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].description}"
