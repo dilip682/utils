@@ -35,6 +35,8 @@ pipeline {
           echo "dev-hostname: ${custdata.customers.dcust.name}"
           echo "dev-hostname: ${custdata.customers.dcust.location}"
           
+          echo "Customer Name from Parameter: ${params.CUST_NAME}"
+          
   /*        echo "dev-hostname: ${custdata.customers[0].lifecycle[0].name}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].description}"
           
