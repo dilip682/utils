@@ -32,10 +32,10 @@ pipeline {
           env.ENV_VAR1 = "${data.attachments[0].color}"
           env.ENV_VAR2 = "${data.attachments[0].fields[0].value}"
           
-          echo "dev-hostname: ${custdata.customers[0].name}"
-          echo "dev-hostname: ${custdata.customers[0].location}"
+          echo "dev-hostname: ${custdata.customers.dcust.name}"
+          echo "dev-hostname: ${custdata.customers.dcust.location}"
           
-          echo "dev-hostname: ${custdata.customers[0].lifecycle[0].name}"
+  /*        echo "dev-hostname: ${custdata.customers[0].lifecycle[0].name}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].description}"
           
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].app_servers[0].hostname}"
@@ -49,7 +49,7 @@ pipeline {
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].db_name}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].port}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].db_servers[0].user_name}"
-                
+ */               
         }
         sh 'echo "### ENV_VAR1 $ENV_VAR1"'
         sh 'echo "### ENV_VAR2 $ENV_VAR2"'  
