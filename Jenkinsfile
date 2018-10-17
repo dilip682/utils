@@ -36,7 +36,7 @@ pipeline {
           echo "dev-hostname: ${custdata.customers.dcust.location}"
           
           echo "Customer Name from Parameter: ${params.CUST_NAME}"
-          echo "Customer Name from JSON matching Customer Param: ${custdata.customers.'${params.CUST_NAME}'.name}"
+          echo "Customer Name from JSON matching Customer Param: ${custdata.customers.+${params.CUST_NAME}+.name}"
           
   /*        echo "dev-hostname: ${custdata.customers[0].lifecycle[0].name}"
           echo "dev-hostname: ${custdata.customers[0].lifecycle[0].description}"
